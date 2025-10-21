@@ -18,7 +18,7 @@ Suporta execução **local** ou via **Docker Compose**, utilizando variáveis de
 - Docker & Docker Compose
 
 ### 2) Clone o projeto
-```bash
+
 git clone https://github.com/KentoImayoshi/PrjAPIRestGo-Gin.git
 cd PrjAPIRestGo-Gin
 
@@ -42,7 +42,7 @@ DB_PASSWORD=root
 DB_NAME=root
 DB_SSLMODE=disable
 DB_TIMEZONE=America/Sao_Paulo
-# (Opcional) DATABASE_URL=postgres://root:root@localhost:5432/root?sslmode=disable
+(Opcional) DATABASE_URL=postgres://root:root@localhost:5432/root?sslmode=disable
 
 🧪 Rodando
 Opção A — Postgres no Docker + API local
