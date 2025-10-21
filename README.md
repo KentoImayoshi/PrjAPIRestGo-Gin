@@ -54,7 +54,7 @@ Rode a API local (usa DB_HOST=localhost):
 
 go run main.go
 
-###Opção B — Tudo no Docker
+### Opção B — Tudo no Docker
 O docker-compose.yml já injeta DB_HOST=postgres para o container da API:
 
 docker compose up --build
