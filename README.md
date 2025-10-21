@@ -18,7 +18,7 @@ Suporta execução **local** ou via **Docker Compose**, utilizando variáveis de
 - Docker & Docker Compose
 
 ### 2) Clone o projeto
-'''bash
+```bash
 git clone https://github.com/KentoImayoshi/PrjAPIRestGo-Gin.git
 cd PrjAPIRestGo-Gin
 
