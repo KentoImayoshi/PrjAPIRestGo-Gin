@@ -117,7 +117,7 @@ Não comite o .env.
 
 Para produção, defina as variáveis no ambiente do servidor, ou use Docker secrets.
 
-## 🧩 Estrutura (sugestão)
+### 🧩 Estrutura (sugestão)
 .
 ├─ database/
 │  └─ db.go              # Conexão com o Postgres (GORM + AutoMigrate)
