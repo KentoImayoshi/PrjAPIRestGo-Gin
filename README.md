@@ -117,22 +117,24 @@ Não comite o .env.
 
 Para produção, defina as variáveis no ambiente do servidor, ou use Docker secrets.
 
-### 🧩 Estrutura (sugestão)
-.
-├─ database/
-│  └─ db.go              # Conexão com o Postgres (GORM + AutoMigrate)
-├─ models/
-│  └─ aluno.go           # Model Aluno
-├─ controllers/
-│  └─ alunos.go          # Handlers (CRUD)
-├─ routes/
-│  └─ routes.go          # Registro de rotas Gin
-├─ main.go               # Boot da aplicação
-├─ docker-compose.yml
-├─ Dockerfile
-├─ .env                  # (ignorado no Git)
-└─ .gitignore
+## 🧩 Estrutura (sugestão)
 
+```text
+.
+├── database/
+│   └── db.go              # Conexão com o Postgres (GORM + AutoMigrate)
+├── models/
+│   └── aluno.go           # Model Aluno
+├── controllers/
+│   └── alunos.go          # Handlers (CRUD)
+├── routes/
+│   └── routes.go          # Registro de rotas Gin
+├── main.go                # Boot da aplicação
+├── docker-compose.yml
+├── Dockerfile
+├── .env                   # (ignorado no Git)
+└── .gitignore
+```
 
 ## 🧯 Troubleshooting
 Erro “lookup postgres: no such host” rodando local:
