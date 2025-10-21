@@ -22,7 +22,7 @@ Suporta execução **local** ou via **Docker Compose**, utilizando variáveis de
 git clone https://github.com/KentoImayoshi/PrjAPIRestGo-Gin.git
 cd PrjAPIRestGo-Gin
 
-3) Crie seu .env (não comite)
+### 3) Crie seu .env (não comite)
 Crie um arquivo .env na raiz com os valores do seu ambiente:
 
 Arquivo .env
@@ -44,8 +44,8 @@ DB_SSLMODE=disable
 DB_TIMEZONE=America/Sao_Paulo
 (Opcional) DATABASE_URL=postgres://root:root@localhost:5432/root?sslmode=disable
 
-🧪 Rodando
-Opção A — Postgres no Docker + API local
+## 🧪 Rodando
+### Opção A — Postgres no Docker + API local
 Suba só o banco:
 
 docker compose up -d postgres
@@ -54,7 +54,7 @@ Rode a API local (usa DB_HOST=localhost):
 
 go run main.go
 
-Opção B — Tudo no Docker
+###Opção B — Tudo no Docker
 O docker-compose.yml já injeta DB_HOST=postgres para o container da API:
 
 docker compose up --build
@@ -62,7 +62,7 @@ docker compose up --build
 A API ficará acessível em http://localhost:8080 (se você expôs a porta no compose/main).
 
 
-🗄️ Banco de Dados & Migrações
+## 🗄️ Banco de Dados & Migrações
 Na inicialização, o GORM executa AutoMigrate para o modelo Aluno.
 Isso cria/atualiza a tabela automaticamente.
 
@@ -77,7 +77,7 @@ type Aluno struct {
 
 Se seu modelo tiver campos diferentes, ajuste aqui e nos exemplos abaixo.
 
-📚 Endpoints (CRUD Alunos)
+## 📚 Endpoints (CRUD Alunos)
 Base URL: http://localhost:8080
 
 GET /alunos
@@ -106,7 +106,7 @@ curl -X DELETE http://localhost:8080/alunos/1
 
 Rotas reais podem variar conforme seu main.go/controllers. Se quiser, mando a seção de rotas exatamente como estão no seu código.
 
-⚙️ Configuração
+## ⚙️ Configuração
 Variáveis de ambiente usadas
 DATABASE_URL (opcional, tem prioridade se definido)
 
@@ -117,7 +117,7 @@ Não comite o .env.
 
 Para produção, defina as variáveis no ambiente do servidor, ou use Docker secrets.
 
-🧩 Estrutura (sugestão)
+## 🧩 Estrutura (sugestão)
 .
 ├─ database/
 │  └─ db.go              # Conexão com o Postgres (GORM + AutoMigrate)
@@ -134,7 +134,7 @@ Para produção, defina as variáveis no ambiente do servidor, ou use Docker sec
 └─ .gitignore
 
 
-🧯 Troubleshooting
+## 🧯 Troubleshooting
 Erro “lookup postgres: no such host” rodando local:
 Use DB_HOST=localhost no .env quando a API roda fora do Docker.
 postgres é o nome do serviço dentro da rede do Docker.
@@ -145,5 +145,5 @@ Confira POSTGRES_USER/POSTGRES_PASSWORD/POSTGRES_DB no container e DB_* da API.
 Banco “sumiu” após recriar container:
 Monte um volume (ex.: postgres-data:/var/lib/postgresql/data) — já previsto no compose.
 
-📜 Licença
+## 📜 Licença
 Este projeto é distribuído sob a licença MIT. Veja LICENSE (se aplicável).
