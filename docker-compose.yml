@@ -20,12 +20,8 @@ services:
       DB_NAME: ${DB_NAME}
       DB_SSLMODE: ${DB_SSLMODE}
       DB_TIMEZONE: ${DB_TIMEZONE}
-      # Ou use apenas:
-      # DATABASE_URL: ${DATABASE_URL}
     depends_on:
       - postgres
-    # ports:
-    #   - "8080:8080" # se quiser expor a API
 
 volumes:
   postgres-data:
