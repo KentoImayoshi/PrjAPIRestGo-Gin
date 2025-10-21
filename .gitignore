@@ -1,0 +1,10 @@
+# segredos
+.env
+.env.*
+
+# volumes locais
+postgres-data/
+
+# IDE
+.vscode/
+.idea/
