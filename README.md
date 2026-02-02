@@ -103,7 +103,6 @@ This project uses GORM and runs AutoMigrate at startup to create/update the Stud
 │   └── routes.go          # Gin routes registration
 ├── main.go                # App bootstrap
 ├── docker-compose.yml
-├── Dockerfile
 ├── .env                   # (gitignored)
 └── .gitignore
 ```
